@@ -74,3 +74,27 @@ When creating a trip, the fields `id`, `is_confimed = false`, `is_owner = true (
 - `GET /trips/:tripId/links` - Receives `tripId` as route parameter and shows a list of all registered links for a trip.
 - `GET /participants/:participantId/confirm` - Receives `participantId` as route parameter and confirms the participant presence by changing the `is_confirmed` field in the participants table.
 - `GET /participants/:participantId ` - Receives `participantId` as route parameter and shows a single participant of the trip.`
+
+## How to run👨‍💻
+```bash
+# Clone the project to the desired location on your computer.
+$ git clone https://github.com/leonardomenezes7/plann.er-api.git
+
+# Navigate to the directory
+$ cd plann.er-api
+
+# Install necessary dependencies
+$ npm install
+
+# Create the database
+$ npx prisma db push
+
+# Create a .env file and enter the necessary environment variables
+
+# Use postman link to use the client
+https://www.postman.com/leonardomnz/workspace/nlw-journey
+
+# boot the server
+$ npm run dev
+
+```
