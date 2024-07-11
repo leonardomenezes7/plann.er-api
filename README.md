@@ -62,4 +62,15 @@
 
 ## Routes🔃
 - `POST /trips` - Create a trip in the database, sending `destination`, `starts_at`, `ends_at`, `owner_name`, `owner_email`, `emails_to_invite` fields through the request body.
-When creating a trip, the fields `id`, `is_confimed = false` and `created_at` will be automatically populated.
+When creating a trip, the fields `id`, `is_confimed = false`, `is_owner = true (on table participants)` and `created_at` will be automatically populated.
+- `GET /trips/:tripId/confirm ` - Receives `tripId` as route parameter, confirms the trip and sends attendance confirmation emails to invited participants.
+- `PUT /trips/:tripId` - Receives `tripId` as route parameter and updates the trip data by sending the fields `destination`, `starts_at`, `ends_at` through the request body.
+- `GET /trips/:tripId` - Receives `tripId` as route parameter and displays data from the selected trip.
+- `GET /trips/:tripId/participants` - Receives `tripId` as route parameter and shows a list of all registered participants for a trip.
+- `POST /trips/:tripId/invites` - Receives `tripId` as route parameter and sends an invitation email to a new participant by sending the field `email` through the request body.
+- `POST /trips/:tripId/activities` - Receives `tripId` as route parameter and creates a new scheduled activity for the trip  by sending the fields `title` and `occurs_at` through the request body.
+- `GET /trips/:tripId/activities` - Receives `tripId` as route parameter and shows a list of all registered activities for a trip.
+- `POST /trips/:tripId/links` - Receives `tripId` as route parameter and creates a link to the selected trip by sending the `title` and `url` fields in the request body.
+- `GET /trips/:tripId/links` - Receives `tripId` as route parameter and shows a list of all registered links for a trip.
+- `GET /participants/:participantId/confirm` - Receives `participantId` as route parameter and confirms the participant presence by changing the `is_confirmed` field in the participants table.
+- `GET /participants/:participantId ` - Receives `participantId` as route parameter and shows a single participant of the trip.`
