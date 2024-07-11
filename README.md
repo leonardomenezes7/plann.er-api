@@ -98,3 +98,8 @@ https://www.postman.com/leonardomnz/workspace/nlw-journey
 $ npm run dev
 
 ```
+
+## About🖇️
+In this project developed at Rocketseat's NLW Journey event, I reinforced my knowledge about backend programming and learned new skills, such as using the ORM prisma to manage the database more easily.
+
+### Developed by ![Leonardo Menezes](https://www.linkedin.com/in/leonardo-menezes-04629a292/)
