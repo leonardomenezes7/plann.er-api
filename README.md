@@ -59,3 +59,7 @@
 - `trip_id` - Identifier of which trip the activity is from (references `id` on table `trips`).
 - `title` - Activity title.
 - `occurs_at` - Date when the activity occurs.
+
+## Routes🔃
+- `POST /trips` - Create a trip in the database, sending `destination`, `starts_at`, `ends_at`, `owner_name`, `owner_email`, `emails_to_invite` fields through the request body.
+When creating a trip, the fields `id`, `is_confimed = false` and `created_at` will be automatically populated.
